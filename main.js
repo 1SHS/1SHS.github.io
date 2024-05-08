@@ -7,9 +7,9 @@ function randomValueFromArray(array){
   return array[random];
 }
 
-const storyText = 'It was 94 fahrenheit outside, so :insertx: went for a walk. When they got to :inserty:, they stared in horror for a few moments, then :insertz:. Bob saw the whole thing, but was not surprised — :insertx: weighs 300 pounds, and it was a hot day.';
-const insertX = ['Willy the Goblin', 'Big Daddy', 'Father Christmas'];
-const insertY = ['the soup kitchen', 'Disneyland', 'the White House'];
+const storyText = 'It was 32 fahrenheit in the city of Norego, so :insertx: went for a run. When they got to :inserty:, they stared in confusion for a few moments, then :insertz:. Bob saw the whole thing, but was not surprised — :insertx: weighs 150 pounds, and it was a hot day.';
+const insertX = ['Mr N', 'Dean WoodBarks', 'Larry'];
+const insertY = ['Spreyg High School', 'the town of north melas'];
 const insertZ = ['spontaneously combusted', 'melted into a puddle on the sidewalk', 'turned into a slug and crawled away'];
 
 randomize.addEventListener('click', result);
@@ -29,14 +29,21 @@ function result() {
     const name = customName.value;
     newStory = newStory.replaceAll('Bob', name);
   }
-
-  if (document.getElementById("uk").checked) {
-    const weight = `${Math.round(300*0.0714286)} stone`;
-    const temperature =  `${Math.round((94-32) * 5 / 9)} centigrade`;
-    newStory = newStory.replaceAll('94 fahrenheit', temperature);
-    newStory = newStory.replaceAll('300 pounds', weight);
+  
+  if (city.value !== '') {
+    const cityname = city.value;
+    newStory = newStory.replaceAll('Norego', cityname);
   }
 
+  if (document.getElementById("uk").checked) {
+    const weight = `${Math.round(150*0.0714286)} stone`;
+    const temperature =  `${Math.round((32-94) * 5 / 9)} centigrade`;
+    newStory = newStory.replaceAll('32 fahrenheit', temperature);
+    newStory = newStory.replaceAll('300 pounds', weight);
+  }
+  
+  }
+  {
   story.textContent = newStory;
   story.style.visibility = 'visible';
 }
