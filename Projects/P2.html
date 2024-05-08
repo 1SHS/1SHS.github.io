@@ -1,69 +1,62 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Project 2</title>
-       <link rel="stylesheet" type="text/css" href="my_style2.css">
-    </head>
-     
-    <body id="body">
-        <h1 style ="color:#BA0C2F; font-size:30px;">State of California</h1>
-        
-        <hr>
-        
-        <h3 id="h3">Official State things</h3>
-        
-        <ul style = "text-align : left">
-            <li class="checklist">State animal - California grizzly bear  <em>established in 1958</em></li>
-        <li class="checklist">State dance - West Coast Swing<em> established in 1988</em></li>
-        <li class="checklist">State sport - Surfing<em> established in 2018</em></li>
-        <li class="checklist">State motto - Eureka<em> established in 1968</em></li>
-        </ul>
-        <a href ="https://en.wikipedia.org/wiki/List_of
-        _California_state_symbols">Information cited from Wikipedia</a>
-        
-        <hr>
-        
-        <h3 id="h3">Top 3 exports</h3>
-        <div id="ul1"><ul style = "text-align : left">
-            <li class="alert">Computers and Other electronic products(22.4% of exports)</li>
-            <li class="alert">Nonelectrical (11.7% of exports)</li>
-            <li class="alert">Chemical</li>
-        </ul></div>
-        
-        
-        <h3 id="h3">Top 3 imports</h3>
-        
-        <ul style = "text-align : left">
-            <li class="alert">Petrol Oil</li>
-            <li class="alert">Medium sized cars</li>
-            <li class="alert">Automatic processing data machines</li>
-            
-        </ul>
-        <a href = "https://oec.world/en/profile/subnational_usa_state/ca">Information cited from oec</a>
-        <a href = "https://advocacy.calchamber.com/2023/02/
-        14/2022-california-exports-reach-record-high/">Information cited from calchamber</a>
-        
-        <hr>
-        
-        <table border="1">
-            <thead style="background-color:rgba(0, 0, 0, 0);>
-                <tr>
-                    <th id ="tableh" >State Name</th>
-                    <th id="tableh"> California</th>
-                </tr>
-            </thead>
-            <tbody style = "background-color :lightgreen">
-                <tr>
-                    <td>Population of State</td>
-                    <td>39.24 M</td>
-                </tr>
-                
-                <tr>
-                    <td>State Landmark</td>
-                    <td>	The Abbey, Joaquin Miller House</td>
-                </tr>
-                
-            </tbody>
-        </table>
-    </body>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <title>Silly story generator</title>
+
+    <style>
+      body {
+        font-family: helvetica, sans-serif;
+        width: 350px;
+      }
+
+      label {
+        font-weight: bold;
+      }
+
+      div {
+        padding-bottom: 20px;
+      }
+
+      input[type="text"] {
+        padding: 5px;
+        width: 150px;
+      }
+
+      p {
+        background: #ffc125;
+        color: #5e2612;
+        padding: 10px;
+        visibility: hidden;
+      }
+    </style>
+  </head>
+
+  <body>
+    <label>"L's Silly Story!"</label>
+	<br>
+	<br>
+	
+	<div>
+      <label for="customname">Enter custom name:</label>
+      <input id="customname" type="text" placeholder="" />
+	  
+	  <label for="city">Enter custom city:</label>
+      <input id="city" type="text" placeholder="" />
+    </div>
+    <div>
+      <label for="us">US</label
+      ><input id="us" type="radio" name="ukus" value="us" checked />
+      <label for="uk">UK</label
+      ><input id="uk" type="radio" name="ukus" value="uk" />
+    </div>
+    <div>
+      <button class="randomize">Generate random story</button>
+    </div>
+    <!-- Thanks a lot to Willy Aguirre for his help with the code for this assessment -->
+    <p class="story"></p>
+    <script src="m4in.js"></script>
+  </body>
 </html>
