@@ -1,4 +1,5 @@
 const customName = document.getElementById('customname');
+const birthDate = document.getElementById('birthdate');
 const randomize = document.querySelector('.randomize');
 const story = document.querySelector('.story');
 
@@ -7,10 +8,11 @@ function randomValueFromArray(array){
   return array[random];
 }
 
-const storyText = 'It was 32 fahrenheit in the city of Norego, so :insertx: went for a run. When they got to :inserty:, they stared in confusion for a few moments, then :insertz:. Bob saw the whole thing, but was not surprised — :insertx: weighs 150 pounds, and it was a hot day.';
-const insertX = ['Mr N', 'Dean WoodBarks', 'Larry'];
-const insertY = ['Spreyg High School', 'the town of north melas'];
-const insertZ = ['spontaneously combusted', 'melted into a puddle on the sidewalk', 'turned into a slug and crawled away'];
+const storyText = 'It was date 2024 and also was placeholder\'s birthday, so placeholder\'s friends went with :insertx: to get placeholder a gift. When they got to :inserty:, they stared in horror as :inserty: had been demolished, then suddenly placeholder\'s friends :insertz:. placeholder saw the whole thing, and was horrfied ';
+const insertX = ['Malcolm', 'Dean WoodBarks', 'Larry'];
+const insertY = ['Mickey D\'s', 'the town of north melas', 'the state of nogero'];
+const insertZ = ['combusted into ice shards', 'turned into  blocks of ice'];
+const insertw = ['120','87','94'];
 
 randomize.addEventListener('click', result);
 
@@ -20,30 +22,25 @@ function result() {
   const xItem = randomValueFromArray(insertX);
   const yItem = randomValueFromArray(insertY);
   const zItem = randomValueFromArray(insertZ);
+  const wItem = randomValueFromArray(insertZ);
 
   newStory = newStory.replaceAll(':insertx:',xItem);
   newStory = newStory.replaceAll(':inserty:',yItem);
   newStory = newStory.replaceAll(':insertz:',zItem);
+  newStory = newStory.replaceAll(':insertw',wItem);
 
   if (customName.value !== '') {
     const name = customName.value;
-    newStory = newStory.replaceAll('Bob', name);
+    newStory = newStory.replaceAll('placeholder', name);
   }
   
-  if (city.value !== '') {
-    const cityname = city.value;
-    newStory = newStory.replaceAll('Norego', cityname);
+   if (birthDate.value !== '') {
+    const mdd = birthDate.value;
+    newStory = newStory.replaceAll('date', mdd);
   }
 
-  if (document.getElementById("uk").checked) {
-    const weight = `${Math.round(150*0.0714286)} stone`;
-    const temperature =  `${Math.round((32-94) * 5 / 9)} centigrade`;
-    newStory = newStory.replaceAll('32 fahrenheit', temperature);
-    newStory = newStory.replaceAll('300 pounds', weight);
-  }
   
-  }
-  {
+
   story.textContent = newStory;
   story.style.visibility = 'visible';
 }
