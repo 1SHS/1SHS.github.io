@@ -39,8 +39,6 @@ function result() {
     newStory = newStory.replaceAll('date', mdd);
   }
 
-  
-
- alert (newStory);
+  story.textContent = newStory
 
 }
