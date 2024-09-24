@@ -1,9 +1,15 @@
 <!DOCTYPE html>
 <html>
 <body>
-
-<<form action="results.aspx">
-  <input type="text" name="q">
+const search = document.getElementById("search");
+const handleSubmit = (e) => {
+    e.preventDefault();
+    window.location.href = `https://www.example.com/results.aspx?q=${encodeURIComponent(
+        search.value
+    )}`;
+};
+<form onsubmit="handleSubmit(event)">
+  <input id="search" type="text">
   <button>Search</button>
 </form>
 </body>
